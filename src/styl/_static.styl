@@ -17,8 +17,17 @@
 .logo__link
   padding-bottom: 14px
 
+.top-logo
+  +respond-to(779px)
+    display: none
+
 .mob-logo
   display: none
+
+  +respond-to(779px)
+    display: block
+    width: 35px
+    height: 38px
 
 .top-menu__wrap
   margin-top: 4px
@@ -45,6 +54,9 @@
   &:hover, &.active
     &:after
       width: 100%
+
+  +respond-to(1019px)
+    margin: 0 10px
 
 .button
   margin-left: 10px

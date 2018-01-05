@@ -1,0 +1,157 @@
+.main-block
+  position: relative
+  background-position: center
+  background-size: cover
+  height: 568px
+  padding: 32px 45px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  box-sizing: border-box
+  border-radius: 5px 5px 0 0
+  align-items: flex-start
+  position: relative
+  background-image: url('images/main_pic.png')
+  background-image: -webkit-image-set(url(images/main_pic.png) 1x, url(images/main_pic@2x.png) 2x)
+
+  +respond-from(1850px)
+    padding: 32px 60px 34px 60px
+    background-position center
+
+  +respond-to(1439px)
+    height: 568px
+    background-image url("images/main_pic_1020.png")
+    background-image: -webkit-image-set(url(images/main_pic_1020.png) 1x, url(images/main_pic_1020@2x.png) 2x)
+    background-repeat no-repeat
+    background-position center
+    padding: 32px 45px 45px 25px
+
+  +respond-to(1019px)
+    padding: 32px 25px 42px 25px
+    background-image url("images/main_pic_780.png")
+    background-image: -webkit-image-set(url(images/main_pic_780.png) 1x, url(images/main_pic_780@2x.png) 2x)
+    background-position center
+
+  +respond-to(779px)
+    height: 454px
+    padding: 16px 12px 36px 12px
+
+  +respond-to(494px)
+    background-size: contain
+    background-position: top
+
+.main-block__mask
+  position: absolute
+  left: 0
+  bottom: 0
+  width: 100%
+  height: 568px
+  background-image: linear-gradient(-179deg, rgba(0,0,0,0.00) 2%, rgba(1,4,5,0.21) 35%, #05131A 100%)
+
+  +respond-to(1439px)
+    background: linear-gradient(-179deg, rgba(0,0,0,0.00) 2%, rgba(1,4,5,0.21) 35%, #05131A 100%)
+
+  +respond-to(1019px)
+    height: 568px
+    background: linear-gradient(-179deg, rgba(0,0,0,0.00) 2%, rgba(1,4,5,0.21) 35%, #05131A 100%)
+
+  +respond-to(779px)
+    height: 270px
+    background: linear-gradient(-179deg, rgba(0,0,0,0.00) 25%, rgba(1,4,5,0.90) 51%, #05131A 100%)
+
+  +respond-to(494px)
+    height: 405px
+    background-image: linear-gradient(-179deg, rgba(0,0,0,0.00) 25%, rgba(1,4,5,0.90) 46%, #05131A 100%)
+
+.main-block__text
+  margin-top: auto
+  z-index: 2
+
+.main-block__title
+  color: $color_white
+  font-size: 46px
+  line-height: 54px
+  font-weight: 600
+  margin-bottom: 12px
+
+  +respond-from(1850px)
+    margin-bottom: 24px
+
+  +respond-to(1439px)
+    font-size: 38px
+    font-weight: 600
+    margin-bottom: 21px
+
+  +respond-to(1019px)
+    font-size: 31px
+    line-height: 39px
+    font-weight: 600
+    margin-bottom: 12px
+
+  +respond-to(779px)
+    font-size: 22px
+    line-height: 30px
+    font-weight: 600
+
+.main-block__text-item
+  color: $color_white
+  font-size: 24px
+  line-height: 32px
+  font-weight: 300
+  margin-bottom: 36px
+
+  +respond-from(1850px)
+    margin-bottom: 28px
+
+  +respond-to(1439px)
+    font-size: 24px
+    line-height: 30px
+    font-weight: 300
+    margin-bottom: 46px
+
+  +respond-to(1019px)
+    width: 650px
+    font-size: 22px
+    line-height: 32px
+    font-weight: 300
+    margin-bottom: 36px
+
+  +respond-to(779px)
+    min-width: 265px
+    width: auto
+    font-size: 16px
+    line-height: 24px
+    font-weight: 300
+    margin-bottom: 12px
+
+.main-block__author
+  position: relative
+  color: $color_white
+  font-size: 12px
+  line-height: 16px
+  font-weight: 300
+  padding-left: 32px
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: -2px
+    width: 20px
+    height: 20px
+    background-image: url(images/icons/author.svg)
+    background-repeat: no-repeat
+
+  +respond-to(1439px)
+    font-size: 12px
+    line-height: 16px
+    font-weight: 300
+
+  +respond-to(1019px)
+    font-size: 12px
+    line-height: 16px
+    font-weight: 300
+
+  +respond-to(779px)
+    font-size: 12px
+    line-height: 16px
+    font-weight: 300

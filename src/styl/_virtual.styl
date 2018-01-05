@@ -1,0 +1,97 @@
+.main-text
+  color: #0A0C0D
+  font-size: 14px
+  line-height: 26px
+  font-weight: 300
+
+  +respond-to(779px)
+    margin-bottom: 20px
+    &:last-child
+      margin-botoom: 0
+
+  a
+    color: #0DA4F0
+    border-bottom  1px solid rgba(30, 146, 204, 0.2)
+    &:hover
+      border-bottom: none
+
+.semibold
+  font-weight: 600
+
+.reg
+  font-weight 600
+  font-size: 8px
+  color: #95A69D
+  letter-spacing: 0
+  line-height: 10px
+  position: relative
+  top: 0
+
+.info-text
+  position: relative
+  margin: 0 auto
+  padding: 23px 45px 25px 72px
+  font-size: 14px
+  line-height: 26px
+  font-weight: 300
+  font-style: italic
+  border-radius: 5px
+  box-sizing: border-box
+  &:before
+    content: ''
+    position: absolute
+    height: 32px
+    width: 32px
+    top: 50%
+    transform: translateY(-50%)
+    left: 24px
+    background: url(images/icons/info-icon.svg) center no-repeat
+
+  +respond-to(1019px)
+    width: 690px
+    display: none
+
+  +respond-to(779px)
+    width: calc(100% - 24px)
+    padding: 16px
+    &:before
+      left: 50%
+      top: -13px
+      transform: translateX(-50%)
+
+.rate-block
+  position: relative
+  min-width: 52px
+  background: #2137B2
+  border-radius: 3px
+  font-size: 14px
+  color: #fff
+  letter-spacing: 0
+  font-weight: 600
+  line-height: 16px
+  height: 29px
+  padding: 6px 8px 2px 8px
+  display: inline-block
+  position: relative
+  vertical-align: text-bottom
+  overflow hidden
+  box-sizing border-box
+  flex-shrink: 0
+
+.section--at-risk
+  .rate-block
+    background: #da3e2c
+    background-image: linear-gradient(-180deg, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.2) 100%)
+
+  .info-text
+    &:before
+      background: url(images/icons/info-icon-red.svg)
+
+.section--secure
+  .rate-block
+    background: #6d8608
+    background-image: linear-gradient(-180deg, rgba(255,255,255,0.35) 0%, rgba(0,0,0,0.35) 100%)
+
+  .info-text
+    &:before
+      background: url(images/icons/info-icon-green.svg)

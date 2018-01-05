@@ -5,22 +5,29 @@ body
   $ultraThin()
   color: #0A0C0D
 
-button
-  font-family: Whitney SSm A, sans-serif
-
-.main-article
-  &--table
-    margin-bottom: 290px
+ul,li
+  list-style: none
+  padding: 0
+  margin: 0
 
 .content
   width: 1220px
   margin: 0 auto
   position relative
 
-ul,li
-  list-style: none
-  padding: 0
-  margin: 0
+  +respond-from(1850px)
+    width: 1360px
+
+  +respond-to(1439px)
+    width: 980px
+
+  +respond-to(1019px)
+    width: auto
+    max-width: 740px
+
+  +respond-to(779px)
+    margin-left: 10px
+    margin-right: 10px
 
 .main-article
   padding-top: 32px
@@ -31,118 +38,8 @@ ul,li
   background-repeat no-repeat, repeat-x, repeat-x
   background-size: auto, auto, auto
 
-.main-pic
-  position: relative
-  background-position: center
-  background-size: cover
-  height: 568px
-  padding: 32px 45px
-  display: flex
-  flex-direction: column
-  justify-content: space-between
-  box-sizing: border-box
-  border-radius: 5px 5px 0 0
-  align-items: flex-start
-  position: relative
-  background-image: url('images/main_pic.png')
-  background-image: -webkit-image-set(url(images/main_pic.png) 1x, url(images/main_pic@2x.png) 2x)
-
-.main-pic__mask
-  position: absolute
-  left: 0
-  bottom: 0
-  width: 100%
-  height: 568px
-  background-image: linear-gradient(-179deg, rgba(0,0,0,0.00) 2%, rgba(1,4,5,0.21) 35%, #05131A 100%)
-
-.article-text
-  margin-top: auto
-  z-index: 2
-
-.article-title
-  color: $color_white
-  font-size: 46px
-  line-height: 54px
-  font-weight: 600
-  margin-bottom: 12px
-
-.article-text__item
-  color: $color_white
-  font-size: 24px
-  line-height: 32px
-  font-weight: 300
-  margin-bottom: 36px
-
-.article-author
-  position: relative
-  color: $color_white
-  font-size: 12px
-  line-height: 16px
-  font-weight: 300
-  padding-left: 32px
-  &:before
-    content: ''
-    position: absolute
-    left: 0
-    top: -2px
-    width: 20px
-    height: 20px
-    background-image: url(images/icons/author.svg)
-    background-repeat: no-repeat
-
-.breadcrumbs
-  &__wrap
-    display: flex
-    width: auto
-    background-color: rgba(255, 255, 255, .9)
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10)
-    border-radius: 2px
-    padding: 0 14px
-  &__item
-    font-size: 12px
-    letter-spacing: 0
-    line-height: 42px
-    color: #667780
-    &:first-child
-      &:before
-        display: none
-    &:before
-      content: ''
-      display: inline-block
-      color: #fff
-      width: 6px
-      height: 13px
-      background-image: url(images/svg/arrow.svg)
-      background-position: 0px 5px
-      background-size: 100% auto
-      margin: 0 6px 0 8px
-      background-repeat no-repeat
-
-  &__link
-    color: $main_color
-    letter-spacing: 0
-    line-height: 42px
-    text-decoration underline
-    text-decoration-color: #A3DCF0
-    $ultraThin()
-    &:hover
-      text-decoration none
-
-.text-box
-  padding: 64px 45px
-  background-color: $color_white
-  margin-bottom: 10px
-
-.text-box--upper
-  position: relative
-  padding-top: 45px
-  padding-left: 37px
-  .main-text
-    font-weight: 400
-
-.text-box--wide
-  padding-left: 0
-  padding-right: 0
+  +respond-from(1850px)
+    background-image url(images/footer_bg.png), url(images/svg/clouds_bg.svg) , none, linear-gradient(-180deg, #34c4f0 0, #1c90e2 100%)
 
 .under-title__text
   font-size: 14px
@@ -150,599 +47,14 @@ ul,li
   font-weight: 400
   margin-bottom: 24px
 
-.semibold
-  font-weight: 600
-
-.upper-pic
-  position: absolute
-  left: 45px
-  img
-    width: 263px
-    height: 300px
-
 .under-title
   color: #0A0C0D
-  font-size: 17px
+  font-size: 18px
   line-height: 32px
   font-weight: 200
   margin-bottom: 24px
-  padding-left: 308px
-
-.under-title--last
-  margin-bottom: 58px
-
-.main-text
-  color: #0A0C0D
-  font-size: 14px
-  line-height: 24px
-  font-weight: 300
   &:last-child
     margin-bottom: 0
-
-  a
-    color: #0DA4F0
-    border-bottom  1px solid rgba(30, 146, 204, 0.2)
-    &:hover
-      border-bottom: none
-
-.block-title
-  font-size: 32px
-  line-height: 40px
-  margin-bottom: 30px
-  color: #103144
-  text-align: center
-  font-weight: 600
-
-.info-text
-  position: relative
-  margin: 0 auto
-  padding: 23px 45px 25px 72px
-  font-size: 14px
-  line-height: 26px
-  font-weight: 300
-  font-style: italic
-  border-radius: 5px
-  box-sizing: border-box
-  &:before
-    content: ''
-    position: absolute
-    height: 32px
-    width: 32px
-    top: 50%
-    transform: translateY(-50%)
-    left: 24px
-    background: url(images/icons/info-icon.svg) center no-repeat
-
-.reg
-  font-weight 600
-  font-size: 8px
-  color: #95A69D
-  letter-spacing: 0
-  line-height: 10px
-  position: relative
-  top: 0
-
-.metrics
-  padding: 32px
-  border: 1px solid #fedb74
-  background: #fefbee
-  border-radius: 3px
-
-  .main-text
-    margin-bottom: 24px
-
-  .main-text:last-child
-    margin-bottom: 0
-
-.metrics__list
-  margin-bottom: 24px
-
-.metrics__list-item
-  position: relative
-  padding-left: 28px
-  font-size: 14px
-  line-height: 22px
-  font-weight: 300
-
-  &:not(:last-child)
-    margin-bottom: 10px
-
-  &:before
-    content: ''
-    width: 16px
-    height: 16px
-    position: absolute
-    left: 0
-    top: 2px
-    background: url(images/icons/upper-bullet.svg) center no-repeat
-
-.intro-img
-  position: relative
-
-.small-img
-  position: absolute
-  right: 44px
-  bottom: 48px
-
-.rankings__item
-  display: flex
-  flex-wrap: wrap
-  margin-bottom: 45px
-  &:last-child
-    margin-bottom: 0
-
-.rankings__item-header
-  display: flex
-  align-items: center
-  width: 100%
-  margin-left: 80px
-  margin-bottom: 18px
-
-  .rate-block
-    margin-right: 16px
-
-.rankings__item-title
-  font-size: 24px
-  line-height: 32px
-  font-weight: 600
-
-.rankings__wrapper
-  width: 800px
-  margin: 0 auto
-  margin-bottom: 64px
-
-.rankings__item-num-block
-  width: 67px
-  margin-right: 13px
-
-.rankings__item-num
-  font-size: 60px
-  line-height: 64px
-  font-weight: 700
-  text-align: right
-
-.rankings__item-text
-  width: 720px
-  @extend .main-text
-
-.text-box--grumpiest
-  .rate-block
-    background: linear-gradient(-90deg, #FD5E56 3%, #E23C33 100%)
-
-  .rankings__item-num
-    color: #fededd
-
-  .info-text
-    &:before
-      background: url(images/icons/info-icon-red.svg)
-
-.text-box--happiest
-  .rate-block
-    background: linear-gradient(-90deg, #39ADB6 0%, #30A0AB 100%)
-
-  .rankings__item-num
-    color: #d7eef0
-
-  .info-text
-    &:before
-      background: url(images/icons/info-icon-green.svg)
-
-.graph__wrapper
-  padding: 16px
-  border: 1px solid #d7dfe4
-  border-radius: 4px
-  margin: 0 45px 0 45px
-
-.graph-img
-  width: 100%
-
-.btn-container
-  display: flex
-  justify-content: center
-  margin-top: 32px
-
-.btn-main
-  display: inline-block
-  font-size: 12px
-  line-height: 26px
-  font-weight: 600
-  text-transform: uppercase
-  color: #d31858
-  border-radius: 5px
-  padding: 14px 24px
-  border: 1px solid #d31858
-  cursor: pointer
-  box-sizing: border-box
-  transition: .25s ease-out
-  &:after
-    content: ''
-    display: inline-block
-    position: relative
-    top: 4px
-    width: 20px
-    height: 20px
-    margin-left: 10px
-    background: url('images/icons/btn-icon-safe.svg') center no-repeat
-
-  .btn-main__text
-    border-bottom: 1px solid rgba(211,24,88,0.3)
-
-  &:hover
-    background-image: linear-gradient(90deg,#b70a36 0,#e01d6d 100%)
-    color: #ffffff
-    border: 1px solid #ffffff
-    &:after
-      background: url('images/icons/btn-icon-hover.svg') center no-repeat
-    .btn-main__text
-      border-bottom: none
-
-.text-box--map
-  .block-title
-    margin-bottom: 0
-
-.text-box--grumpiest
-  .btn-main
-    border: 1px solid #fedfdd
-    color: #e53f36
-
-    &:after
-      background: url('images/icons/btn-icon-safe-red.svg') center no-repeat
-
-    &:hover
-      color: #ffffff
-      background-image: linear-gradient(-90deg, #FF7962 0%, #FF4433 98%)
-      &:after
-        background: url('images/icons/btn-icon-hover.svg') center no-repeat
-      .btn-main__text
-        border-bottom: none
-
-.text-box--happiest
-  .btn-main
-    border: 1px solid #d31858
-    color: #30a1ab
-    border: 1px solid #dbeef0
-
-    &:hover
-      color: #ffffff
-      background-image: linear-gradient(-90deg, #39ADB6 0%, #30A0AB 100%)
-
-  .btn-main__text
-    border-bottom: 1px solid #dbeef0
-
-.map__user-block
-  display: flex
-  flex-direction: row-reverse
-
-.map-btn__wrapper
-  position: relative
-  margin-left: 32px
-  &:first-child
-    margin-left: 0
-
-.map-btn__wrapper--share
-  order: 2
-
-.map-btn
-  position: relative
-  width: 128px
-  height: 58px
-  padding: 16px
-  text-align: center
-  border: 1px solid #fedfdd
-  border-radius: 5px
-  box-sizing: border-box
-  cursor: pointer
-  transition: .25s ease-in
-  background: #ffffff
-
-  &:hover
-    background: #fedfdd
-
-    .map-btn__text
-      border-bottom: 1px solid transparent
-
-.map-btn--share
-  &:after
-    content: ''
-    position: relative
-    display: inline-block
-    width: 16px
-    height: 16px
-    margin-left: 8px
-    top: 3px
-    background: url(images/svg/share-icon.svg) center no-repeat
-
-.map-btn--embed
-  &:after
-    content: ''
-    position: relative
-    display: inline-block
-    width: 27px
-    height: 16px
-    margin-left: 8px
-    top: 3px
-    background: url(images/svg/embed-icon.svg) center no-repeat
-
-.map-btn__container--share
-  position: absolute
-  visibility: hidden
-  top: 55px
-  left: -10px
-  padding: 18px 0
-
-.map-btn__socials
-  position: relative
-  display: flex
-  padding: 24px
-  border: 1px solid #fedfdd
-  border-radius: 3px
-  background: #ffffff
-  box-shadow: 0 4px 6px 0 rgba(0,0,0,0.10)
-  &:before
-    content: ''
-    position: absolute
-    top: -8px
-    left: 50%
-    transform: translateX(-50%)
-    width: 18px
-    height: 8px
-    background: url(images/svg/triangle.svg)
-    background-size: cover
-    border-bottom: 1px solid #ffffff
-
-.map-btn__socials-item
-  display: flex
-  justify-content: center
-  align-items: center
-  width: 24px
-  height: 24px
-  border-radius: 50%
-  box-sizing: border-box
-  margin-right: 12px
-
-  &:last-child
-    margin-right: 0
-
-.map-btn__socials-item--fb
-  border: 1px solid #3d5e96
-
-  &:hover
-    background: #eaeef4
-
-.map-btn__socials-item--tw
-  border: 1px solid #46ade9
-
-  &:hover
-    background: #e5f3fd
-
-.map-btn__socials-item--go
-  border: 1px solid #fedfdd
-
-  &:hover
-    background: #feecec
-
-.map-btn__container--embed
-  position: absolute
-  visibility: hidden
-  top: 55px
-  right: 0
-  padding: 18px 0
-
-.map-btn__embed
-  position: relative
-  display: flex
-  flex-direction: column
-  width: 400px
-  padding: 24px
-  background: #ffffff
-  border-radius: 3px
-  border: 1px solid #fedfdd
-  box-shadow: 0 4px 6px 0 rgba(0,0,0,0.10)
-  z-index: 1
-  &:before
-    content: ''
-    position: absolute
-    top: -8px
-    right: 47px
-    transform: translateX(-50%)
-    width: 18px
-    height: 8px
-    background: url(images/svg/triangle.svg)
-    background-size: cover
-    border-bottom: 1px solid #ffffff
-
-.map-btn__embed-text
-  height: 64px
-  overflow-y: scroll
-  margin-bottom: 16px
-  font-size: 12px
-  line-height: 16px
-  border: 1px solid #cececf
-  border-radius: 3px
-
-.map-btn__embed-copy
-  width: 156px
-  display: inline-block
-  color: #ffffff
-  text-transform: uppercase
-  font-size: 12px
-  line-height: 16px
-  font-weight: 600
-  padding: 8px 14px 8px 14px
-  outline: none
-  border: none
-  background: #fc6860
-  border-radius: 3px
-  cursor: pointer
-  margin: 0 auto
-  &:hover
-    background: rgba(252, 104, 96, .85)
-
-.map-btn__text
-  font-size: 12px
-  line-height: 26px
-  color: #FC6860
-  font-weight: 600
-  border-bottom: 1px solid #fedfdd
-  text-transform: uppercase
-  transition: .25s ease-in
-
-.text-box--methodology
-  border-radius: 0 0 5px 5px
-  .main-text
-    &:not(:last-child)
-      margin-bottom: 24px
-
-.map-btn__container.visible
-  visibility: visible
-
-.methodology-content
-  display: flex
-  flex-direction: row
-  align-items: flex-start
-  margin-bottom: 45px
-
-.methodology-img
-  position: relative
-  min-width: 80px
-  height: 80px
-  margin-right: 24px
-
-.methodology-brands__img
-  &:first-child
-    margin-right: 96px
-
-.methodology-source
-  margin-bottom: 32px
-  margin-left: 104px
-
-.methodology-brands
-  display: flex
-  flex-direction: row
-  flex-wrap: wrap
-  justify-content: flex-start
-  align-items: center
-  margin-left: 104px
-
-.methodology-brands__img
-  margin-left: 20px
-  margin-right: 20px
-  margin-bottom: 36px
-
-.methodology-metrics
-  margin-left: 104px
-  margin-bottom: 45px
-
-.methodology-links__title
-  font-size: 18px
-  line-height: 20px
-  font-weight: 600
-  margin-bottom: 12px
-
-.methodology-links
-  margin-left: 104px
-
-.methodology-links__title
-  font-size: 18px
-  line-height: 20px
-  font-weight: 600
-  margin-bottom: 12px
-
-.methodology-metrics__list-item
-  position: relative
-  font-size: 14px
-  line-height: 26px
-  font-weight: 300
-  padding-left: 14px
-  font-style: italic
-  &:before
-    content: ''
-    width: 6px
-    height: 6px
-    position: absolute
-    left: 0
-    top: 10px
-    background: url(images/icons/methodology-bullet.svg) center no-repeat
-
-.methodology-links__list-item
-  font-size: 14px
-  line-height: 26px
-  font-weight: 300
-
-.methodology-links__link
-  color: #21abf1
-  border-bottom: 1px solid #d1e9f5
-  &:hover
-    border-bottom: none
-
-.related
-  background: #FFFFFF
-  border-radius: 5px
-  margin-top: 30px
-  margin-bottom: 200px
-
-.related-head
-  min-height 54px
-  display flex
-  justify-content space-between
-  align-items center
-  background: #F0FAFF
-  box-shadow: 0 1px 0 0 #DCEFF5
-  border-radius: 5px 5px 0 0
-  padding: 0 31px
-
-.related-title
-  font-size: 12px
-  color: #0084C3
-  letter-spacing: 0
-  text-transform uppercase
-  font-weight 600
-  letter-spacing -.1px
-
-.related-list
-  padding: 34px 31px 0px 31px
-  display flex
-  justify-content space-between
-  .col
-    width: 43%
-    padding-right: 5%
-
-.related-item
-  padding-bottom: 30px
-
-.related-item__title
-  font-size: 14px
-  color: #475359
-  letter-spacing: -0.2px
-  line-height: 20px
-  font-weight 600
-  padding-bottom: 12px
-
-.related-item__text
-  padding-bottom: 13px
-  line-height 24px
-  font-size: 14px
-  color: #475359
-  letter-spacing: -0.1px
-  font-weight 300
-
-.related-item__link
-  letter-spacing: -0.2px
-  font-weight 300
-  font-size: 14px
-  line-height 24px
-  color: #0DA4F0
-  border-bottom: 1px solid rgba(13, 164, 240, 0.30)
-  padding-bottom: 2px
-
-  &:after
-    width: 100%
-    display: block
-    content ''
-    margin-bottom: 3px
-
-  &:hover
-    border-bottom-color: rgba(13, 164, 239, 0.0)
 
 .footer-menu__link, .button-main, .button-register, .rate-block
   -webkit-font-smoothing: antialiased
@@ -751,40 +63,6 @@ ul,li
 
 .mobile-only-close
   display: none
-
-.show-map
-  text-align center
-  font-size: 12px
-  color: #07b45d
-  letter-spacing: 0
-  line-height: 22px
-  margin: 0 auto
-  display: block
-  margin-top: 24px
-  span
-    border-bottom: 1px dotted #07b45d
-    margin-left: 8px
-  &:hover
-    span
-      border-bottom: none
-
-.rate-block
-  min-width: 52px
-  background: #2137B2
-  border-radius: 3px
-  font-size: 14px
-  color: #fff
-  letter-spacing: 0
-  font-weight: 600
-  line-height: 16px
-  height: 26px
-  padding: 5px 8px 3px 8px
-  display: inline-block
-  position: relative
-  vertical-align: text-bottom
-  overflow hidden
-  box-sizing border-box
-  flex-shrink: 0
 
 .mobile-only-show
   display: none
@@ -818,40 +96,91 @@ ul,li
     background: #f8dce5
     transition: .25s
 
-.map-wrapper
-  overlow-x: scroll
+.frame-wrapper
+  position:relative
+  padding-bottom:62.4%
+  padding-top:30px
+  height:0
+  overflow:hidden
 
-.graph-img__mobile-only
-  text-align center
-  font-size: 12px
-  color: $main_color
-  letter-spacing: 0
-  line-height: 22px
-  margin: 0 auto
-  margin-top: 12px
-  display: none
-  span
-    border-bottom: 1px dotted $main_color
-    margin-left: 8px
-  &:hover
-    span
-      border-bottom: none
+.frame-wrapper iframe
+  position:absolute
+  top:0
+  left:0
+  width:100%
+  height:100%
 
-.map-btn__embed-text
-  resize: none
+@media (max-width: 779px)
+  .mobile-table
+    width: 100%
+    margin-bottom: 16px
 
-.frame-wrapper {
-  position:relative;
-  padding-bottom:62.4%;
-  padding-top:30px;
-  height:0;
-  overflow:hidden;
-}
+  .mobile-only-show
+    display: block
 
-.frame-wrapper iframe {
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-}
+  .only_mob-crop
+    width: 100px
+    overflow: hidden
+    white-space: nowrap
+    display: inherit
+    text-overflow: ellipsis
+    vertical-align: top
+
+  .mobile-table
+    width: 100%
+    margin-bottom: 16px
+
+  .mobile-only-close
+    display: none
+    font-style: normal
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    text-align: center
+    color: #e589a8
+    text-decoration: none
+    height: 41px
+    text-transform: uppercase
+    border-radius: 3px
+    padding: 0 20px
+    overflow: hidden
+    font-size: 11px
+    line-height: 43px
+    font-weight bold
+    position: fixed
+    background: #ffffff
+    -webkit-backface-visibility: hidden
+    top: 10px
+    right: 25px
+    border: 1px solid #e589a8
+    .icon
+      margin-right: 8px
+    &:hover
+      border: 1px solid transparent
+      background: #f8dce5
+      transition: .25s
+
+  .map-container.show
+    padding-top: 20px
+    padding-bottom: 20px
+    .mobile-only-show
+      display: none
+    .mobile-only-close
+      width: 80px
+      display: block
+      position: fixed
+      top: 10px
+      right: 25px
+    .map-info
+      padding-left: 24px
+    .map-info__text-item
+      margin-bottom: 0
+    .map-img__wrapper
+      align-items: flex-start
+      overflow-x: scroll
+    .map-img
+      display: none
+    .map-img--big
+      display: block
+
+  .map-container__zoom
+    display: none

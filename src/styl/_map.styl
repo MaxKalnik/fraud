@@ -1,0 +1,210 @@
+.map__user-block
+  display: flex
+  flex-direction: row-reverse
+
+  +respond-to(779px)
+    justify-content: center
+    margin-top: 0
+
+.map__btn-wrapper
+  position: relative
+  margin-left: 32px
+  &:first-child
+    margin-left: 0
+
+.map__btn-wrapper--share
+  order: 2
+
+.map__btn
+  position: relative
+  width: 128px
+  height: 58px
+  padding: 16px
+  text-align: center
+  border: 1px solid #fedfdd
+  border-radius: 5px
+  box-sizing: border-box
+  cursor: pointer
+  transition: .25s ease-in
+  background: #ffffff
+
+  +respond-to(779px)
+    width: 122px
+    height: 48px
+    padding: 11px
+
+  &:hover
+    background: #fedfdd
+
+    .map__btn-text
+      border-bottom: 1px solid transparent
+
+.map__btn--share
+  &:after
+    content: ''
+    position: relative
+    display: inline-block
+    width: 16px
+    height: 16px
+    margin-left: 8px
+    top: 3px
+    background: url(images/svg/share-icon.svg) center no-repeat
+
+.map__btn--embed
+  &:after
+    content: ''
+    position: relative
+    display: inline-block
+    width: 27px
+    height: 16px
+    margin-left: 8px
+    top: 3px
+    background: url(images/svg/embed-icon.svg) center no-repeat
+
+.map__btn-container--share
+  position: absolute
+  visibility: hidden
+  top: 55px
+  left: -10px
+  padding: 18px 0
+
+  +respond-to(779px)
+    top: 45px
+
+
+.map__btn-socials
+  position: relative
+  display: flex
+  padding: 24px
+  border: 1px solid #fedfdd
+  border-radius: 3px
+  background: #ffffff
+  box-shadow: 0 4px 6px 0 rgba(0,0,0,0.10)
+  z-index: 1
+  &:before
+    content: ''
+    position: absolute
+    top: -8px
+    left: 50%
+    transform: translateX(-50%)
+    width: 18px
+    height: 8px
+    background: url(images/svg/triangle.svg)
+    background-size: cover
+    border-bottom: 1px solid #ffffff
+
+.map__btn-socials-item
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 24px
+  height: 24px
+  border-radius: 50%
+  box-sizing: border-box
+  margin-right: 12px
+
+  &:last-child
+    margin-right: 0
+
+.map__btn-socials-item--fb
+  border: 1px solid #3d5e96
+
+  &:hover
+    background: #eaeef4
+
+.map__btn-socials-item--tw
+  border: 1px solid #46ade9
+
+  &:hover
+    background: #e5f3fd
+
+.map__btn-socials-item--go
+  border: 1px solid #fedfdd
+
+  &:hover
+    background: #feecec
+
+.map__btn-container--embed
+  position: absolute
+  visibility: hidden
+  top: 55px
+  right: 0
+  padding: 18px 0
+
+  +respond-to(779px)
+    top: 45px
+
+.map__btn-embed
+  position: relative
+  display: flex
+  flex-direction: column
+  width: 400px
+  padding: 24px
+  background: #ffffff
+  border-radius: 3px
+  border: 1px solid #fedfdd
+  box-shadow: 0 4px 6px 0 rgba(0,0,0,0.10)
+  z-index: 1
+  &:before
+    content: ''
+    position: absolute
+    top: -8px
+    right: 47px
+    transform: translateX(-50%)
+    width: 18px
+    height: 8px
+    background: url(images/svg/triangle.svg)
+    background-size: cover
+    border-bottom: 1px solid #ffffff
+
+  +respond-to(779px)
+    width: 226px
+
+.map__btn-embed-text
+  height: 64px
+  overflow-y: scroll
+  margin-bottom: 16px
+  font-size: 12px
+  line-height: 16px
+  border: 1px solid #cececf
+  border-radius: 3px
+
+.map__btn-embed-copy
+  width: 156px
+  display: inline-block
+  color: #ffffff
+  text-transform: uppercase
+  font-size: 12px
+  line-height: 16px
+  font-weight: 600
+  padding: 8px 14px 8px 14px
+  outline: none
+  border: none
+  background: #fc6860
+  border-radius: 3px
+  cursor: pointer
+  margin: 0 auto
+  &:hover
+    background: rgba(252, 104, 96, .85)
+
+.map__btn-text
+  font-size: 12px
+  line-height: 26px
+  color: #FC6860
+  font-weight: 600
+  border-bottom: 1px solid #fedfdd
+  text-transform: uppercase
+  transition: .25s ease-in
+
+  +respond-to(779px)
+    font-size: 10px
+
+.map__btn-embed-text
+  resize: none
+
+.map-wrapper
+  overlow-x: scroll
+
+.map__btn-container.visible
+  visibility: visible
+

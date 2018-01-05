@@ -1,39 +1,29 @@
-.text-box.text-box--methodology.last
-  h2.block-title Methodology
-  .methodology-content
-    img.methodology-img(src='images/svg/methodology-icon.svg')
-    .methodology-text
-      p.main-text
-        | To arrive at these rankings, RewardExpert analyzed a data set of hotel reviews from TripAdvisor containing a total of 878,561 reviews of 4333 hotels nationwide. We removed all entries that either a) did not include a location for the reviewer, or b) had a non-US reviewer location, leaving 278,662 reviews. We took the reviews that had an overall rating of one or two (on a scale of one to five) as our “grumpy” data set.
+h2.section__title Methodology
+.methodology__content
+  img.methodology__img(src='images/svg/methodology-icon.svg')
+  .methodology__text
+    p.methodology__text-item
+      | To arrive at these rankings, RewardExpert analyzed a data set of hotel reviews from TripAdvisor containing a total of 878,561 reviews of 4333 hotels nationwide. We removed all entries that either a) did not include a location for the reviewer, or b) had a non-US reviewer location, leaving 278,662 reviews. We took the reviews that had an overall rating of one or two (on a scale of one to five) as our “grumpy” data set.
 
-      p.main-text
-        | We tallied the number of reviews from each state in the “grumpy” data set, and assigned each state a score that reflected the excess or deficit of actual reviews, and one based on the percentage of all reviews from each state. We combined these scores with the average rating for reviews from each state, and calculated a weighted average score.
+    p.methodology__text-item
+      | We tallied the number of reviews from each state in the “grumpy” data set, and assigned each state a score that reflected the excess or deficit of actual reviews, and one based on the percentage of all reviews from each state. We combined these scores with the average rating for reviews from each state, and calculated a weighted average score.
 
-  .methodology-metrics
-    h3.methodology-links__title
-      | Indicators/Metrics:
+.methodology__sources
+  h3.methodology__sources-title
+    | Sources:
 
-    ul.methodology-metrics__list
-      li.methodology-metrics__list-item
-        | Average Hotel Review Rating
+  ul.methodology__sources-list
+    li.methodology__sources-list-item
+      | FTC Consumer Sentinel Report (2016 and 2015)
 
-      li.methodology-metrics__list-item
-        | % Negative Hotel Reviews by State
+    li.methodology__sources-list-item
+      | FBI Internet Crime Complaint Center Annual State Report
 
-      li.methodology-metrics__list-item
-        | % Excess Negative Hotel Reviews Vs. Population-Based Estimate
+    li.methodology__sources-list-item
+      | Consumer Finance Protection Bureau Consumer Complaints
 
-      li.methodology-metrics__list-item
-        | % Positive Hotel Reviews
+    li.methodology__sources-list-item
+      | Census Bureau GIS Data
 
-  .methodology-links
-    h3.methodology-links__title
-      | Links
-
-    ul.methodology-links__list
-      li.methodology-links__list-item
-        a.methodology-links__link(href='https://www.tripadvisor.com/' target='_blank')
-          | TripAdvisor.com
-
-      li.methodology-links__list-item
-        | US Census Bureau
+    li.methodology__sources-list-item
+      | Experian State of Credit 2016 Report

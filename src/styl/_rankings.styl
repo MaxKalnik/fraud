@@ -1,0 +1,101 @@
+.rankings__intro
+  position: relative
+
+.rankings__item
+  display: flex
+  flex-wrap: wrap
+  margin-bottom: 45px
+  &:last-child
+    margin-bottom: 0
+
+  +respond-to(779px)
+    margin-bottom: 32px
+    &:last-child
+      margin-bottom: 0
+
+.rankings__item-header
+  display: flex
+  align-items: center
+  width: 100%
+  margin-left: 80px
+  margin-bottom: 18px
+
+  +respond-to(779px)
+    order: 2
+    margin-left: 0
+
+  .rate-block
+    width: 76px
+    margin-right: 16px
+    padding-left: 25px
+
+.rankings__item-title
+  font-size: 24px
+  line-height: 32px
+  font-weight: 600
+
+.rankings__wrapper
+  width: 800px
+  margin: 0 auto
+  margin-bottom: 64px
+
+  +respond-to(1019px)
+    width: 620px
+
+  +respond-to(779px)
+    width: calc(100% - 24px)
+    margin-bottom: 24px
+
+.rankings__item-num-block
+  width: 67px
+  margin-right: 13px
+
+  +respond-to(779px)
+    order: 1
+    width: auto
+    margin: 0 auto 16px auto
+
+.rankings__item-num
+  font-size: 60px
+  line-height: 64px
+  font-weight: 700
+  text-align: right
+
+.rankings__item-text
+  width: 720px
+  @extend .main-text
+
+  +respond-to(1019px)
+    width: 540px
+
+  +respond-to(779px)
+    width: 100%
+    order: 3
+
+.section--at-risk
+  .rankings__item-num
+    color: rgba(218, 62, 44, .2)
+
+  .rate-block
+    &:before
+      content: ""
+      position: absolute
+      left: 8px
+      top: 6px
+      width: 12px
+      height: 17px
+      background: url(images/svg/lock-red.svg)
+
+.section--secure
+  .rankings__item-num
+    color: rgba(128, 160, 0, .2)
+
+  .rate-block
+    &:before
+      content: ""
+      position: absolute
+      left: 8px
+      top: 6px
+      width: 12px
+      height: 17px
+      background: url(images/svg/lock-green.svg)

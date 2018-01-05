@@ -20,20 +20,20 @@ $(document).ready(function () {
         return false
     });
 
-    body.on('click', '.map-btn', function (event) {
+    body.on('click', '.map__btn', function (event) {
         event.preventDefault();
-        if ($(this).siblings('.map-btn__container').hasClass('visible')) {
-            $(this).siblings('.map-btn__container').removeClass('visible');
+        if ($(this).siblings('.map__btn-container').hasClass('visible')) {
+            $(this).siblings('.map__btn-container').removeClass('visible');
         }
         else {
-            $('.map-btn__container').removeClass('visible');
-            $(this).siblings('.map-btn__container').addClass('visible');
+            $('.map__btn-container').removeClass('visible');
+            $(this).siblings('.map__btn-container').addClass('visible');
         }
     });
 
     body.mouseup(function(event) {
-        if ($('.map-btn__wrapper').has(event.target).length === 0) {
-            $('.map-btn__container').removeClass('visible');
+        if ($('.map__btn-wrapper').has(event.target).length === 0) {
+            $('.map__btn-container').removeClass('visible');
         }
     });
 
@@ -41,14 +41,14 @@ $(document).ready(function () {
         event.preventDefault();
         $('.blur').removeClass('show');
         $('.popup').removeClass('show');
-        $('.text-box--map').append($('.map-container'));
+        $('.section--map').append($('.map-container'));
         $('.map-img--big').css('transform', 'scale(1)');
 
         return false
 
     });
 
-    body.on('mousedown', '.map-btn__embed-copy', function(event){
+    body.on('mousedown', '.map__btn-embed-copy', function(event){
         event.preventDefault();
         $(this).css('background', '#fc5c55');
 
@@ -56,7 +56,7 @@ $(document).ready(function () {
 
     });
 
-    body.on('mouseup', '.map-btn__embed-copy', function(event){
+    body.on('mouseup', '.map__btn-embed-copy', function(event){
         event.preventDefault();
         $(this).css('background', '#fc746e');
 
@@ -107,7 +107,7 @@ $(document).ready(function () {
       });
     };
     if($(window).width() < 779) {
-      btnClick('.map-btn', '#ffdad8', '#ffffff');
+      btnClick('.map__btn', '#ffdad8', '#ffffff');
     }
 
     body.on('focus', '#copyTarget', function(event){

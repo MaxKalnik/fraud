@@ -1,0 +1,34 @@
+h2.section__title Map of the at-risk and secure States
+
+.frame-wrapper
+  iframe(src='https://static0.rewardexpert.com/shared/staging/grump-map/' width = "1130px", height = 'auto', frameborder="0", scrolling = "no")
+
+.map__user-block
+  .map__btn-wrapper.map__btn-wrapper--share
+    button.map__btn.map__btn--share
+      span.map__btn-text
+        | Share
+
+    .map__btn-container.map__btn-container--share
+      .map__btn-socials
+        a.map__btn-socials-item.map__btn-socials-item--fb(href="")
+          img.socials-logo(src="images/svg/fb-share.svg")
+
+        a.map__btn-socials-item.map__btn-socials-item--tw(href="")
+          img.socials-logo(src="images/svg/tw-share.svg")
+
+        a.map__btn-socials-item.map__btn-socials-item--go(href="")
+          img.socials-logo(src="images/svg/go-share.svg")
+
+  .map__btn-wrapper.map__btn-wrapper--embed
+    button.map__btn.map__btn--embed
+      span.map__btn-text
+        | Embed
+
+    .map__btn-container.map__btn-container--embed
+      .map__btn-embed
+        textarea.map__btn-embed-text#copyTarget(autofocus='')
+          | <iframe src="https://static0.rewardexpert.com/shared/staging/grump-map/" width="1130px" height="auto" frameborder="0" scrolling="no"></iframe>
+
+        button.map__btn-embed-copy#copyButton
+          | copy to clipboard

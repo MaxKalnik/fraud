@@ -1,0 +1,21 @@
+.k-findings
+  display: flex
+
+.k-findings__img
+  margin-right: 90px
+
+.k-findings__list-item
+  position: relative
+  padding-left: 42px
+  &:before
+    content: ""
+    position: absolute
+    left: 0
+    top: 8px
+    width: 10px
+    height: 10px
+    background: url(images/svg/bullet-white.svg)
+
+.k-findings__list-item-text
+  @extend .main-text
+  color: #ffffff
