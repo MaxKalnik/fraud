@@ -14,7 +14,7 @@
                         <g id="tri" transform="translate(75.000000, 0.000000)">
                             <g id="Triangle">
                                 <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
-                                <path stroke-opacity="0.2" stroke="#FC5E56" stroke-width="1" d="M9,0.668977477 L1.31509966,7.5 L16.6849003,7.5 L9,0.668977477 Z"></path>
+                                <path stroke-opacity="1" stroke="#ccd8e7" stroke-width="1" d="M9,0.668977477 L1.31509966,7.5 L16.6849003,7.5 L9,0.668977477 Z"></path>
                             </g>
                             <rect id="Rectangle-4" fill="#FFFFFF" x="2" y="7" width="14" height="1"></rect>
                         </g>

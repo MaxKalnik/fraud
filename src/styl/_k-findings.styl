@@ -1,12 +1,27 @@
 .k-findings
   display: flex
+  align-items: center
+
+  +respond-from(1850px)
+    justify-content: space-between
+
+  +respond-to(779px)
+    flex-direction: column
 
 .k-findings__img
   margin-right: 90px
 
+  +respond-to(1019px)
+    margin-right: 9px
+
+  +respond-to(779px)
+    margin-right: 0
+    margin-bottom: 31px
+
 .k-findings__list-item
   position: relative
   padding-left: 42px
+  margin-bottom: 24px
   &:before
     content: ""
     position: absolute
@@ -15,6 +30,12 @@
     width: 10px
     height: 10px
     background: url(images/svg/bullet-white.svg)
+
+  +respond-to(1019px)
+    padding-left: 24px
+
+  +respond-to(779px)
+    padding-left: 22px
 
 .k-findings__list-item-text
   @extend .main-text

@@ -19,9 +19,17 @@
 
     &__item
       &:nth-child(3),
+      &:nth-child(4),
       &:last-child
         overflow: hidden
         text-overflow: ellipsis
+
+      &:nth-child(3),
+      &:nth-child(4)
+        min-width: 45px
+
+      &:last-child
+        min-width: 75px
 
 .ranking-table
   width: 100%
@@ -30,6 +38,7 @@
   border: 1px solid #E6E6F2
   border-top: none
   box-sizing: border-box
+  background-image: linear-gradient(90deg, #1F82E3 0%, #0C4BC2 100%)
   thead
     th
       height: 46px
@@ -64,7 +73,6 @@
       &:last-child
         border-bottom: none
 
-
 .section--g-table,
 .section--h-table
   border-radius: 5px
@@ -75,233 +83,35 @@
   .section__title
     margin-bottom: 45px
 
-.ranking-table
-  background: linear-gradient(90deg, #FD5E56 3%, #E23C33 100%)
-
 .section--g-table
   .ranking-table
-    background-image: linear-gradient(-90deg, #FD5E56 3%, #E23C33 100%)
+    background-image: linear-gradient(-90deg, #1F82E3 0%, #0C4BC2 100%)
 
   .ranking-table.ranking-table--fixed
-    background-image: linear-gradient(-90deg, #E33D34 3%, #E43E35 100%)
+    background-image: linear-gradient(90deg, #0C4BC2 3%, #0D4EC4 100%)
 
   .rate-block
     background: #FC6960
-  tr
-    &:nth-child(2)
-      .rate-block
-        background: #FC6D5C
-
-    &:nth-child(3)
-      .rate-block
-        background: #FC7159
-
-    &:nth-child(4)
-      .rate-block
-        background: #FC7456
-
-    &:nth-child(5)
-      .rate-block
-        background: #FC7853
-
-    &:nth-child(6)
-      .rate-block
-        background: #FC7B51
-
-    &:nth-child(7)
-      .rate-block
-        background: #FD7F4E
-
-    &:nth-child(8)
-      .rate-block
-        background: #FD834B
-
-    &:nth-child(9)
-      .rate-block
-        background: #FD8748
-
-    &:nth-child(10)
-      .rate-block
-        background: #FE8C45
-
-    &:nth-child(11)
-      .rate-block
-        background: #FE8F43
-
-    &:nth-child(12)
-      .rate-block
-        background: #FD9240
-
-    &:nth-child(13)
-      .rate-block
-        background: #FE963E
-
-    &:nth-child(14)
-      .rate-block
-        background: #FE993A
-
-    &:nth-child(15)
-      .rate-block
-        background: #FE9D37
-
-    &:nth-child(16)
-      .rate-block
-        background: #FEA134
-
-    &:nth-child(17)
-      .rate-block
-        background: #FEA531
-
-    &:nth-child(18)
-      .rate-block
-        background: #FEA92E
-
-    &:nth-child(19)
-      .rate-block
-        background: #FEAC2C
-
-    &:nth-child(20)
-      .rate-block
-        background: #FEAF29
-
-    &:nth-child(21)
-      .rate-block
-        background: #FFB426
-
-    &:nth-child(22)
-      .rate-block
-        background: #FEB822
-
-    &:nth-child(23)
-      .rate-block
-        background: #FEBB20
-
-    &:nth-child(24)
-      .rate-block
-        background: #FFBF1D
-
-    &:nth-child(25)
-      .rate-block
-        background: #FFC21B
-
-    &:nth-child(26)
-      .rate-block
-        background: #FFC618
-
-    &:nth-child(27)
-      .rate-block
-        background: #F8C61E
-
-    &:nth-child(28)
-      .rate-block
-        background: #F1C624
-
-    &:nth-child(29)
-      .rate-block
-        background: #EAC529
-
-    &:nth-child(30)
-      .rate-block
-        background: #E2C430
-
-    &:nth-child(31)
-      .rate-block
-        background: #DAC437
-
-    &:nth-child(32)
-      .rate-block
-        background: #D3C33E
-
-    &:nth-child(33)
-      .rate-block
-        background: #CBC245
-
-    &:nth-child(34)
-      .rate-block
-        background: #C3C14A
-
-    &:nth-child(35)
-      .rate-block
-        background: #BCC151
-
-    &:nth-child(36)
-      .rate-block
-        background: #B3C059
-
-    &:nth-child(37)
-      .rate-block
-        background: #ACBF5F
-
-    &:nth-child(38)
-      .rate-block
-        background: #A4BE65
-
-    &:nth-child(39)
-      .rate-block
-        background: #9DBD6B
-
-    &:nth-child(40)
-      .rate-block
-        background: #96BD72
-
-    &:nth-child(41)
-      .rate-block
-        background: #8DBC7A
-
-    &:nth-child(42)
-      .rate-block
-        background: #87BC7F
-
-    &:nth-child(43)
-      .rate-block
-        background: #7EBB87
-
-    &:nth-child(44)
-      .rate-block
-        background: #77BA8E
-
-    &:nth-child(45)
-      .rate-block
-        background: #70BA93
-
-    &:nth-child(46)
-      .rate-block
-        background: #68B99A
-
-    &:nth-child(47)
-      .rate-block
-        background: #61B8A1
-
-    &:nth-child(48)
-      .rate-block
-        background: #5AB7A7
-
-    &:nth-child(49)
-      .rate-block
-        background: #51B7AF
-
-    &:nth-child(50)
-      .rate-block
-        background: #49B5B4
-
-    &:nth-child(51)
-      .rate-block
-        background: #42B5BA
-
-
 
   tbody
     tr
-      border-bottom: 1px solid #fee6e5
+      border-bottom: 1px solid #e8f2fc
       &:nth-child(odd)
-        background: #fff7f6
+        background: #f4f8fd
+
+
+  .btn-container
+    display: flex
+    justify-content: center
+    margin-top: 24px
 
   .btn-go-back
-    color: #e53f36
-    border: 1px solid #fedfdd
+    display: inline-block
+    color: #1d7de0
+    border: 1px solid #1d7de0
     transition: .25s
     &:hover
-      background: #e53f36
+      background: #1f82e3
       color: #ffffff
       border-color: #ffffff
 
@@ -397,6 +207,9 @@
     tbody
       td
         padding: 0 8px
+
+  .ranking-table.ranking-table--data
+    min-width: 490px
 
   .ranking-table.ranking-table--fixed
     width: 120px

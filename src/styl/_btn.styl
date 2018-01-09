@@ -29,6 +29,7 @@ button
     padding: 10px 12px
     font-size: 10px
     text-align: center
+    margin-top: 12px
 
   &:after
     content: ''
@@ -38,13 +39,10 @@ button
     width: 20px
     height: 20px
     margin-left: 10px
-    background: url('images/icons/btn-icon-safe.svg') center no-repeat
+    background: url('images/icons/btn-icon-green.svg') center no-repeat
 
     +respond-to(779px)
       display: none
-
-  .btn__main-text
-    border-bottom: 1px solid rgba(211,24,88,0.3)
 
   &:hover
     background-image: linear-gradient(90deg,#b70a36 0,#e01d6d 100%)
@@ -52,20 +50,21 @@ button
     border: 1px solid transparent
     &:after
       background: url('images/icons/btn-icon-hover.svg') center no-repeat
-    .btn-main__text
-      border-bottom: 1px solid transparent
+
+.btn__main-text--red
+  border-bottom: 1px solid rgba(218,149,44, .3)
 
 .section--at-risk
   .btn__main
-    border: 1px solid #fedfdd
     color: #e53f36
+    border: 1px solid #fedfdd
 
     &:after
-      background: url('images/icons/btn-icon-safe-red.svg') center no-repeat
+      background: url('images/icons/btn-icon-red.svg') center no-repeat
 
     &:hover
       color: #ffffff
-      background-image: linear-gradient(-90deg, #FF7962 0%, #FF4433 98%)
+      background: #da3e2c
       &:after
         background: url('images/icons/btn-icon-hover.svg') center no-repeat
       .btn__main-text
@@ -73,16 +72,15 @@ button
 
 .section--secure
   .btn__main
-    border: 1px solid #d31858
-    color: #30a1ab
-    border: 1px solid #dbeef0
+    color: #6d8608
+    border: 1px solid #e2e7ce
+
+    .btn__main-text
+      border-bottom: 1px solid rgba(109,134,8,0.2)
 
     &:hover
       color: #ffffff
-      background-image: linear-gradient(-90deg, #39ADB6 0%, #30A0AB 100%)
+      background: #6d8608
 
       .btn__main-text
-        border: 1px solid transparent
-
-  .btn__main-text
-    border-bottom: 1px solid #dbeef0
+        border-bottom: none

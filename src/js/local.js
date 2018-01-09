@@ -48,22 +48,6 @@ $(document).ready(function () {
 
     });
 
-    body.on('mousedown', '.map__btn-embed-copy', function(event){
-        event.preventDefault();
-        $(this).css('background', '#fc5c55');
-
-        return false
-
-    });
-
-    body.on('mouseup', '.map__btn-embed-copy', function(event){
-        event.preventDefault();
-        $(this).css('background', '#fc746e');
-
-        return false
-
-    });
-
     function topMenu() {
         if ($(window).width() < 959) {
 
@@ -106,6 +90,7 @@ $(document).ready(function () {
 
       });
     };
+
     if($(window).width() < 779) {
       btnClick('.map__btn', '#ffdad8', '#ffffff');
     }
@@ -124,39 +109,6 @@ function copyToClipboard(element) {
     $temp.remove();
 }
 
-// $(window).on('resize', function () {
-//         $('.grump-map').attr('src', $('iframe').attr('src'));
-//     });
-
 document.getElementById("copyButton").addEventListener("click", function() {
     copyToClipboard(document.getElementById("copyTarget"));
 });
-
-// function throttle(fn, threshhold, scope) {
-//   threshhold || (threshhold = 250);
-//   var last,
-//       deferTimer;
-//   return function () {
-//     var context = scope || this;
-
-//     var now = +new Date,
-//         args = arguments;
-//     if (last && now < last + threshhold) {
-//       // hold on to it
-//       clearTimeout(deferTimer);
-//       deferTimer = setTimeout(function () {
-//         last = now;
-//         fn.apply(context, args);
-//       }, threshhold);
-//     } else {
-//       last = now;
-//       fn.apply(context, args);
-//     }
-//   };
-// };
-
-// var onResizeWindow = function() {
-//   google.charts.setOnLoadCallback(drawRegionsMap);
-// };
-
-// window.addEventListener("resize", throttle(onResizeWindow, 300));

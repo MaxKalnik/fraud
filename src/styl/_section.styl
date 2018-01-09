@@ -63,10 +63,6 @@
     font-size 26px
     line-height: 34px
 
-.section--map
-  .section__title
-    margin-bottom: 0
-
 .section--methodology
   border-radius: 0 0 5px 5px
 
@@ -78,6 +74,15 @@
   font-style: italic
   margin: 0 45px
   text-align: center
+
+  +respond-from(1850px)
+    margin: 0 60px
+
+  +respond-to(1019px)
+    margin: 0 25px
+
+  +respond-to(779px)
+    margin: 0 12px
 
 .section__title--close
   margin-bottom: 12px
@@ -96,10 +101,52 @@
   margin-bottom: 45px
 
 .section__upper--at-risk
-  background: url(images/photo/risk.png)
+  background: url(images/photo/risk.png) center no-repeat
+  @media (-webkit-min-device-pixel-ratio: 2),( min--moz-device-pixel-ratio: 2),(-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2),(min-resolution: 192dpi), (min-resolution: 2dppx)
+    background: url(images/photo/risk@2x.png) center no-repeat
+    background-size: cover
+
+  +respond-to(1019px)
+    background: url(images/photo/risk-1020.png) center no-repeat
+    @media (-webkit-min-device-pixel-ratio: 2),( min--moz-device-pixel-ratio: 2),(-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2),(min-resolution: 192dpi), (min-resolution: 2dppx)
+      background: url(images/photo/risk-1020@2x.png) center no-repeat
+      background-size: cover
+
+  +respond-to(779px)
+    background: url(images/photo/risk-780.png) center no-repeat
+    @media (-webkit-min-device-pixel-ratio: 2),( min--moz-device-pixel-ratio: 2),(-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2),(min-resolution: 192dpi), (min-resolution: 2dppx)
+      background: url(images/photo/risk-780@2x.png) center no-repeat
+      background-size: cover
+
+  +respond-to(320px)
+    background: url(images/photo/risk-320.png) center no-repeat
+    @media (-webkit-min-device-pixel-ratio: 2),( min--moz-device-pixel-ratio: 2),(-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2),(min-resolution: 192dpi), (min-resolution: 2dppx)
+      background: url(images/photo/risk-320@2x.png) center no-repeat
+      background-size: cover
 
 .section__upper--secure
-  background: url(images/photo/secure.png)
+  background: url(images/photo/secure.png) center no-repeat
+  @media (-webkit-min-device-pixel-ratio: 2),( min--moz-device-pixel-ratio: 2),(-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2),(min-resolution: 192dpi), (min-resolution: 2dppx)
+    background: url(images/photo/secure@2x.png) center no-repeat
+    background-size: cover
+
+  +respond-to(1019px)
+    background: url(images/photo/secure-1020.png) center no-repeat
+    @media (-webkit-min-device-pixel-ratio: 2),( min--moz-device-pixel-ratio: 2),(-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2),(min-resolution: 192dpi), (min-resolution: 2dppx)
+      background: url(images/photo/secure-1020@2x.png) center no-repeat
+      background-size: cover
+
+  +respond-to(779px)
+    background: url(images/photo/secure-780.png) center no-repeat
+    @media (-webkit-min-device-pixel-ratio: 2),( min--moz-device-pixel-ratio: 2),(-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2),(min-resolution: 192dpi), (min-resolution: 2dppx)
+      background: url(images/photo/secure-780@2x.png) center no-repeat
+    background-size: cover
+
+  +respond-to(320px)
+    background: url(images/photo/secure-320.png) center no-repeat
+    @media (-webkit-min-device-pixel-ratio: 2),( min--moz-device-pixel-ratio: 2),(-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2),(min-resolution: 192dpi), (min-resolution: 2dppx)
+      background: url(images/photo/secure-320@2x.png) center no-repeat
+      background-size: cover
 
 .section__upper-text
   position: absolute
