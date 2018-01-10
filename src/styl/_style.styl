@@ -98,10 +98,16 @@ ul,li
 
 .frame-wrapper
   position:relative
-  padding-bottom:62.4%
+  padding-bottom:64%
   padding-top:30px
   height:0
   overflow:hidden
+
+  +respond-to(779px)
+    padding-bottom: 66%
+
+  +respond-to(567px)
+    padding-bottom: 70%
 
 .frame-wrapper iframe
   position:absolute
@@ -110,7 +116,7 @@ ul,li
   width:100%
   height:100%
 
-@media (max-width: 779px)
++respond-to(779px)
   .mobile-table
     width: 100%
     margin-bottom: 16px

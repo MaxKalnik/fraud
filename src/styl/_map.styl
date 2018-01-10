@@ -39,6 +39,9 @@
     .map__btn-text
       border-bottom: 1px solid transparent
 
+  &:active
+    background: #ffffff
+
 .map__btn--share
   &:after
     content: ''
@@ -64,12 +67,11 @@
 .map__btn-container--share
   position: absolute
   visibility: hidden
-  top: 55px
+  top: 75px
   left: -10px
-  padding: 18px 0
 
   +respond-to(779px)
-    top: 45px
+    top: 55px
 
 .map__btn-socials
   position: relative
@@ -126,12 +128,11 @@
 .map__btn-container--embed
   position: absolute
   visibility: hidden
-  top: 55px
+  top: 75px
   right: 0
-  padding: 18px 0
 
   +respond-to(779px)
-    top: 45px
+    top: 65px
 
 .map__btn-embed
   position: relative
@@ -187,6 +188,9 @@
     background: rgba(22,103,211,.85)
   &:active
     background: #1667d3
+
+  +respond-to(779px)
+    font-size: 10px
 
 .map__btn-embed-copy.map__btn-embed-copy--light-blue
   background: #4080d7

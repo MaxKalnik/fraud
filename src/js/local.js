@@ -91,10 +91,6 @@ $(document).ready(function () {
       });
     };
 
-    if($(window).width() < 779) {
-      btnClick('.map__btn', '#ffdad8', '#ffffff');
-    }
-
     body.on('focus', '#copyTarget', function(event){
           $(this).select();
     });

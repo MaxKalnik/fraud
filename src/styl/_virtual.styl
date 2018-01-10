@@ -47,14 +47,19 @@
     transform: translateY(-50%)
     left: 24px
     background: url(images/icons/info-icon.svg) center no-repeat
+    background-size: cover
 
   +respond-to(1019px)
     width: 690px
-    display: none
+    &:before
+      width: 24px
+      height: 24px
 
   +respond-to(779px)
     width: calc(100% - 24px)
-    padding: 16px
+    padding: 10px
+    padding-top: 16px
+    font-size: 12px
     &:before
       left: 50%
       top: -13px
