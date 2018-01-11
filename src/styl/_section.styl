@@ -91,7 +91,8 @@
   color: #ffffff
 
 .section--k-findings
-  background-image: linear-gradient(-180deg, #0a1f37 0%, #03122f 100%)
+  position: relative
+  background-image: linear-gradient(180deg, #1c3660 0%, #060a16 100%)
   color: #ffffff
 
 .section__upper
@@ -105,6 +106,12 @@
   @media (-webkit-min-device-pixel-ratio: 2),( min--moz-device-pixel-ratio: 2),(-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2),(min-resolution: 192dpi), (min-resolution: 2dppx)
     background: url(images/photo/risk@2x.png) center no-repeat
     background-size: cover
+
+  +respond-from(1850px)
+    background: url(images/photo/risk-1920.png) center no-repeat
+    @media (-webkit-min-device-pixel-ratio: 2),( min--moz-device-pixel-ratio: 2),(-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2),(min-resolution: 192dpi), (min-resolution: 2dppx)
+      background: url(images/photo/risk-1920@2x.png) center no-repeat
+      background-size: cover
 
   +respond-to(1019px)
     background: url(images/photo/risk-1020.png) center no-repeat
@@ -129,6 +136,12 @@
   @media (-webkit-min-device-pixel-ratio: 2),( min--moz-device-pixel-ratio: 2),(-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2),(min-resolution: 192dpi), (min-resolution: 2dppx)
     background: url(images/photo/secure@2x.png) center no-repeat
     background-size: cover
+
+  +respond-from(1850px)
+    background: url(images/photo/secure-1920.png) center no-repeat
+    @media (-webkit-min-device-pixel-ratio: 2),( min--moz-device-pixel-ratio: 2),(-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2),(min-resolution: 192dpi), (min-resolution: 2dppx)
+      background: url(images/photo/secure-1920@2x.png) center no-repeat
+      background-size: cover
 
   +respond-to(1019px)
     background: url(images/photo/secure-1020.png) center no-repeat

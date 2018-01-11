@@ -1,27 +1,69 @@
 .k-findings
+  position: relative
   display: flex
   align-items: center
+  padding-left: 467px
 
   +respond-from(1850px)
     justify-content: space-between
+    padding-left: 522px
+
+  +respond-to(1439px)
+    padding-left: 346px
+
+  +respond-to(1019px)
+    padding-left: 246px
+
+  +respond-to(779px)
+    padding-left: 0
 
   +respond-to(779px)
     flex-direction: column
 
-.k-findings__img
-  margin-right: 90px
+.k-findings__img-wrapper
+  position: absolute
+  left: 20px
+  top: -100px
+
+  +respond-from(1850px)
+    left: 40px
+    top: -65px
+
+  +respond-to(1439px)
+    left: -5px
+    top: 0
 
   +respond-to(1019px)
-    margin-right: 9px
+    left: 0
 
   +respond-to(779px)
+    position: static
     margin-right: 0
     margin-bottom: 31px
+
+.k-findings__list
+  +respond-to(1849px)
+    margin-top: 15px
+    padding-right: 50px
+
+  +respond-to(1439px)
+    margin-top: 0
+    padding-right: 0
+
+  +respond-to(1019px)
+    padding-right: 10px
+
+  +respond-to(779px)
+    padding-right: 0
 
 .k-findings__list-item
   position: relative
   padding-left: 42px
-  margin-bottom: 24px
+  margin-bottom: 32px
+
+  &:last-child
+    margin-bottom: 0
+
   &:before
     content: ""
     position: absolute
@@ -30,6 +72,12 @@
     width: 10px
     height: 10px
     background: url(images/svg/bullet-white.svg)
+
+  +respond-to(1439px)
+    margin-bottom: 24px
+
+    &:last-child
+      margin-bottom: 0
 
   +respond-to(1019px)
     padding-left: 24px
