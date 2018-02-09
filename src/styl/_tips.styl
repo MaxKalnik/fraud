@@ -1,0 +1,121 @@
+.tips__content
+  position: relative
+  display: flex
+  align-items: flex-start
+  margin-bottom: 64px
+
+  +respond-from(1850px)
+    justify-content: space-between
+
+  +respond-to(779px)
+    flex-direction: column
+    align-items: center
+
+.tips__img-wrapper
+  margin-right: 44px
+
+  +respond-from(1850px)
+    margin-right: 44px
+
+  +respond-to(1019px)
+    margin-right: 30px
+
+  +respond-to(779px)
+    margin-bottom: 24px
+
+.tips__list
+  +respond-to(1849px)
+    margin-top: 15px
+    padding-right: 50px
+
+  +respond-to(1439px)
+    margin-top: 0
+    padding-right: 0
+
+  +respond-to(1019px)
+    padding-right: 10px
+
+  +respond-to(779px)
+    padding-right: 0
+
+.tips__list-item
+  position: relative
+  margin-bottom: 32px
+
+  &:last-child
+    margin-bottom: 0
+
+  +respond-to(1439px)
+    margin-bottom: 24px
+
+    &:last-child
+      margin-bottom: 0
+
+.tips__list-item-text
+  @extend .main-text
+  color: #ffffff
+
+a.tips__list-item-text-link
+  color: #ffffff
+  border-bottom: 1px solid rgba(255, 255, 255, .4)
+  cursor: pointer
+  &:hover
+    border-bottom: none
+
+.tips__cards
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+
+  +respond-to(779px)
+    flex-direction: column
+    align-items: center
+
+.tips__cards-item-img
+  margin-bottom: 18px
+
+  +respond-to(779px)
+    margin-bottom: 8px
+
+  img
+    +respond-to(1019px)
+      width: 170px
+
+    +respond-to(779px)
+      width: 192px
+
+.tips__cards-item
+  width: 192px
+  cursor: pointer
+
+  &:hover
+    .tips__cards-item-text
+      border-bottom: 1px solid rgba(255, 255, 255, 0)
+
+  +respond-to(1019px)
+    width: 170px
+
+  +respond-to(779px)
+    width: 192px
+    margin-bottom: 24px
+    &:last-child
+      margin-bottom: 0
+
+.tips__cards-item-text-wrap
+  width: 192px
+  display: inline-block
+  text-align: center
+  +respond-to(1019px)
+    width: 170px
+
+  +respond-to(779px)
+    width: 192px
+
+.tips__cards-item-text
+  font-size: 16px
+  line-height: 24px
+  font-weight: 400
+  color: #ffffff
+  transition: .25s
+  border-bottom: 1px solid rgba(255, 255, 255, .4)
+  text-align: center

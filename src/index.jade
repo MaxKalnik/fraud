@@ -1,44 +1,48 @@
 doctype html
-head
-  script(type='text/javascript', src='https://www.gstatic.com/charts/loader.js')
-  meta(charset='utf-8')
-  meta(name='viewport', content='width=device-width, initial-scale=1.0')
-  link(inline='', rel='stylesheet', type='text/css', href='style.min.css')
-  title Which U.S. States Are Home to the at-risk and secure Travelers?
+html
+  head
+    script(type='text/javascript', src='https://www.gstatic.com/charts/loader.js')
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(inline='', rel='stylesheet', type='text/css', href='style.min.css')
+    title Which U.S. States Are Home to the at-risk and secure Travelers?
 
-body
-  .page__wrap
-    include ./partials/header.jade
+  body
+    .page__wrap
+      include ./partials/header.jade
 
-    article.main-article
-      .content
-        include ./partials/featured-cards.jade
+      article.main-article
+        .content
+          include ./partials/featured-cards.jade
 
-        include ./partials/main-block.jade
+          include ./partials/main-block.jade
 
-        section.section.section--upper
-          include ./partials/upper.jade
+          section.section.section--upper
+            include ./partials/upper.jade
 
-        section.section.section--k-findings
-          include ./partials/k-findings.jade
+          section.section.section--k-findings
+            include ./partials/k-findings.jade
 
-        section.section.section--map.section--at-risk
-          include ./partials/map.jade
+          section.section.section--map.section--at-risk
+            include ./partials/map.jade
 
-        section.section.section--at-risk.section--wide
-          include ./partials/at-risk.jade
+          section.section.section--at-risk.section--wide
+            include ./partials/at-risk.jade
 
-        section.section.section--secure.section--wide
-          include ./partials/secure.jade
+          section.section.section--secure.section--wide
+            include ./partials/secure.jade
 
-        section.section.section--methodology
-          include ./partials/methodology.jade
+          section.section.section--tips
+            include ./partials/tips.jade
 
-        section.related
-          include ./partials/related.jade
+          section.section.section--methodology
+            include ./partials/methodology.jade
 
-        include ./partials/pswp.jade
+          section.related
+            include ./partials/related.jade
 
-    include ./partials/footer.jade
+          include ./partials/pswp.jade
 
-  script(type='text/javascript', src='js/script.min.js')
+      include ./partials/footer.jade
+
+    script(type='text/javascript', src='js/script.min.js')
